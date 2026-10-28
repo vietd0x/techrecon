@@ -1,0 +1,10 @@
+target,target_type,host,scan_zone,scope_status,risk_score
+example.com,hostname,example.com,external,in_scope,50
+www.example.com,hostname,www.example.com,external,in_scope,50
+httpbin.org,hostname,httpbin.org,external,in_scope,30
+api.example.com,hostname,api.example.com,external,in_scope,70
+203.0.113.10,ip,203.0.113.10,external,in_scope,40
+198.51.100.5:8443,host_port,198.51.100.5,external,in_scope,60
+https://shop.example.com,url,shop.example.com,external,in_scope,80
+10.0.0.5,ip,10.0.0.5,internal,in_scope,10
+intranet.example.com,hostname,intranet.example.com,internal,out_of_scope,20
