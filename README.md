@@ -36,7 +36,7 @@ techrecon scan -i targets.csv -o out.csv -e httpx nuclei whatweb --deep -v
 ### Docker (recommended — all tools included)
 
 ```bash
-git clone https://github.com/user/techrecon.git
+git clone https://github.com/vietd0x/techrecon.git
 cd techrecon
 
 # Build image (bundles httpx + nuclei + whatweb + webanalyze)
@@ -51,7 +51,7 @@ make build
 [uv](https://github.com/astral-sh/uv) is a fast Python package/venv manager.
 
 ```bash
-git clone https://github.com/user/techrecon.git
+git clone https://github.com/vietd0x/techrecon.git
 cd techrecon
 
 # Create an isolated environment and install techrecon (editable)
@@ -75,7 +75,7 @@ uv run techrecon engines
 ### From source with pip
 
 ```bash
-git clone https://github.com/user/techrecon.git
+git clone https://github.com/vietd0x/techrecon.git
 cd techrecon
 pip install -e .
 ```
