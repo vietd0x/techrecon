@@ -1,0 +1,14 @@
+services:
+  techrecon:
+    build: .
+    image: techrecon:latest
+    container_name: techrecon
+    volumes:
+      - ./data/input:/data/input
+      - ./data/output:/data/output
+    network_mode: host
+    # Default: show help. Override with specific command.
+    # Examples:
+    #   docker compose run techrecon scan -i /data/input/targets.csv -o /data/output/technology_ver.csv
+    #   docker compose run techrecon report -i /data/output/technology_ver.csv --all
+    #   docker compose run techrecon engines

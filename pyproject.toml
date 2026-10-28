@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "techrecon"
+version = "1.1.0"
+description = "Technology stack detection framework for asset inventories"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "MBBank Security Team"},
+]
+keywords = ["security", "recon", "technology-detection", "asset-inventory", "httpx"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+]
+dependencies = [
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "ruff>=0.1.0"]
+
+[project.scripts]
+techrecon = "techrecon.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["techrecon*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py38"

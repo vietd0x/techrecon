@@ -1,0 +1,29 @@
+engine:
+  enabled:
+    - httpx
+
+  httpx:
+    threads: 50
+    timeout: 10
+    retries: 1
+    rate_limit: 0
+    follow_redirects: true
+    user_agent: ""
+
+filter:
+  external_only: true
+  skip_internal: true
+  internal_ranges:
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+    - "192.168.0.0/16"
+    - "127.0.0.0/8"
+  target_types:
+    - hostname
+    - ip
+    - url
+    - host_port
+  scope_status:
+    - in_scope
+
+output_dir: output
